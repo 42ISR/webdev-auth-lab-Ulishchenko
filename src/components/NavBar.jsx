@@ -13,14 +13,15 @@ const NavBar = () => {
                     <ul className="nav-links">
                         <li><Link to="/">Домой</Link></li>
 
-                        {!session ? (
-                            <li><Link to="/login">Войти</Link></li>
-                        ) : (
-                            <>
-                                <li><Link to="/create-item">Создать товар</Link></li>
-                                <li><Link to="/logout">Выйти</Link></li>
-                            </>
-                        )}
+{!session ? (
+                    <li><Link to="/login">Войти</Link></li>
+                    ) : (
+                    <>
+                    <li><Link to="/create-item">Создать товар</Link></li>
+                    <li><Link to="/bids">Мои ставки</Link></li>
+                    <li><Link to="/logout">Выйти</Link></li>
+</>
+)}
                     </ul>
                 </nav>
             </header>

@@ -32,14 +32,15 @@ const Login = () => {
     return (
         <div className="container">
             <div class="auth-container">
-                <div className="auth-error">Ошибка</div>
+
                 <div class="auth-header">
                     <div class="auth-icon">🔐</div>
                     <h1 class="auth-title">Вход</h1>
                     <p class="auth-subtitle">Войдите в свой аккаунт</p>
                 </div>
 
-                    {error.length > 0 && <div className="auth-error">{error}</div>}
+
+                    {error && <div className="alert alert-error active">{error}</div>}
                     
 
                 <form onSubmit={handleSubmit}>

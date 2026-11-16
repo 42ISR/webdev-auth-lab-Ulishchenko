@@ -44,14 +44,8 @@ const user = {
                     <p class="auth-subtitle">Создайте новый аккаунт</p>
                 </div>
 
-                    
+                {error && <div className="alert alert-error active">{error}</div>}
 
-
-                <div class="alert alert-error active" id="error-alert">
-                    Такое имя пользователя уже занято
-                </div>
-                <div className="auth-error">Ошибка</div>
-                
                 <form onSubmit={handleSubmit}>
                     <div class="form-group">
                         <label class="form-label">Имя пользователя</label>
